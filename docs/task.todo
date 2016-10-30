@@ -1,0 +1,50 @@
+#Task 2 - News aggregator 
+
+## Summary
+
+Create a small web application that must implement:
+
+* User System
+    ☐ * Admin user is created from command line using `php artisan user:create`
+    ☐ * Admin user can login
+    ☐ * Admin user can change password
+    ☐ * Admin user can add, edit, delete feed urls (CRUD)
+    ☐ * Admin can create categories in which feed urls are grouped
+* Aggregator System
+  ☐ * Feeds are updated using command line `php artisan feed:update`
+  ☐ * When page is loaded latest feeds are shown from all feed providers
+  ☐ * User has posibility to filter feeds by category (choose one of the options)
+    ☐ * Filter using new request
+    ☐ * Filter using javascript 
+  ☐ * When clicked on feed provider, the feed provider page is opened in new tab
+  ☐ * When clicked on feed title
+    ☐ * Modal window is shown with feed title and feed text
+    ☐ * There is two buttons:
+      ☐ * Go to feed page (opens in new tab)
+      ☐ * Close the modal
+
+## Examples
+
+* [http://visosnaujienos.lt](http://visosnaujienos.lt)
+* [http://tavonaujienos.lt](http://tavonaujienos.lt)
+* [http://24news.lt](http://24news.lt)
+
+## Requirements
+
+ ☐ * Use css framework ([bootstrap](http://getbootstrap.com/), [foundation](http://foundation.zurb.com/)) or the one you are used to.
+ ☐ * Use js framework ([jQuery](https://jquery.com/), [vue.js](https://vuejs.org/)) or libs that only needs to accomplish the assignment.
+ ☐ * Use php framework ([laravel](https://laravel.com/))
+ ☐ * Use [Coding Standards](../../coding-standards/index.md)
+ ☐ * **Don't use 3rd party libraries, use only vanilla code (only laravel framework).**
+ ☐ * **Use service container for your service classes** 
+ ☐ * Write some tests for your classes
+
+## Additionally
+
+ ☐ * Put all your code into a VCS - ([bitbucket](https://bitbucket.org/)) 
+ ☐ * Write a README.md on how to configure and run your application
+ ☐ * Your application should work using PHP builtin server
+
+## Most important things during the assesment
+ ☐ * Have a great time
+ ☐ * If you don't know or don't understand something - **ASK**! We will do our best to help you in solving your problem.
