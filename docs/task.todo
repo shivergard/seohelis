@@ -5,7 +5,8 @@
 Create a small web application that must implement:
 
 * User System
-    ☐ * Admin user is created from command line using `php artisan user:create`
+    ✔ * Admin user is created from command line using `php artisan user:create` @done (16-10-30 20:19)
+    ✔ -- Password reset from code [duplicated code :(] @done (16-11-01 05:31)
     ☐ * Admin user can login
     ☐ * Admin user can change password
     ☐ * Admin user can add, edit, delete feed urls (CRUD)

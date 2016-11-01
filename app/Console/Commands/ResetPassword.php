@@ -5,29 +5,27 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 
 use App\User;
-use Config;
 use Validator;
 
 use App\Traits\UserHelper;
 
-class CreateUser extends Command
+class ResetPassword extends Command
 {
 
     use UserHelper;
-    
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'user:create {username} {password?}';
+    protected $signature = 'user:password_reset {username} {password?}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Admin user creating script';
+    protected $description = 'Reset password for user';
 
     /**
      * Create a new command instance.
@@ -48,8 +46,10 @@ class CreateUser extends Command
     {
         $username = $this->argument('username');
 
-        if (User::where('username' , $username)->count() > 0){
-            $this->error('User already exists');
+        $userSelect = User::where('username' , $username);
+
+        if ($userSelect->count() == 0){
+            $this->error("User doesn't exists");
             return 1;
         }
 
@@ -59,25 +59,17 @@ class CreateUser extends Command
             $password = $this->generatePassword(8);
         }
 
-        $this->info('Create User '.$username.' with password '.$password);
+        
 
-        $userDetails =  array(
-            'username' => $username,
-            'email'    => $username.'@'.Config::get('app.domain'),
-            'password' => bcrypt($password)
-        );
-
-        $validator = Validator::make($userDetails, [
-            'username' => 'required|max:50',
-            'email' => 'required|email',
+        $validator = Validator::make(
+            array(
+                'password' => $password
+            ), [
             'password' => 'required|min:8'
         ]);
 
-        // Validate the arguments.
         if ($validator->fails()){
-            // Failed validation.
             foreach($validator->messages()->getMessages() as $field_name => $messages) {
-                // Go through each message for this field.
                 foreach($messages AS $message) {
                     $this->error($field_name . ': ' . $message);
                 }
@@ -85,10 +77,15 @@ class CreateUser extends Command
             return 1;
         }
 
-        $newUser = User::create($userDetails);
+        $userModel = $userSelect->first();
 
-        if ($newUser->id){
-            $this->info('User created');
+        $userModel->password = bcrypt($password);
+
+        if ($userModel->save()){
+            $this->info(ucfirst($username).' password is '.$password);
+        }else{
+            $this->error('Error saving password');
+            return 1;
         }
     }
 }
