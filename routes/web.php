@@ -18,5 +18,29 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+//category routes
+Route::group(array('prefix' => "/category"), function(){
+    Route::get('/' , 'FeedCategoryController@list');
+    Route::get('/add' , 'FeedCategoryController@add');
+    Route::get('/edit/{id}' , 'FeedCategoryController@edit');
+    Route::get('/view/{id}' , 'FeedCategoryController@view');
+    Route::post('/store' , 'FeedCategoryController@store');
+    Route::post('/delete' , 'FeedCategoryController@delete');
+});
+
+//feed source routes
+Route::group(array('prefix' => "/sources"), function(){
+    Route::get('/' , 'FeedSourcesController@list');
+    Route::get('/add' , 'FeedSourcesController@add');
+    Route::get('/edit/{id}' , 'FeedSourcesController@edit');
+    Route::get('/view/{id}' , 'FeedSourcesController@view');
+    Route::post('/store' , 'FeedSourcesController@store');
+});
+
+
+//profile routes
 Route::get('/profile' , 'ProfileController@index');
 Route::post('/profile' ,'ProfileController@update');

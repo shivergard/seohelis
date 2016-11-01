@@ -4,13 +4,15 @@
 
 Create a small web application that must implement:
 
+Create User anna with password lVkHnxh0
+
 * User System
     ✔ * Admin user is created from command line using `php artisan user:create` @done (16-10-30 20:19)
     ✔ -- Password reset from code [duplicated code :(] @done (16-11-01 05:31)
     ✔ * Admin user can login @done (16-11-01 06:05)
     ✔ * Admin user can change password @done (16-11-01 08:47)
     ☐ * Admin user can add, edit, delete feed urls (CRUD)
-    ☐ * Admin can create categories in which feed urls are grouped
+    ✔ * Admin can create categories in which feed urls are grouped @done (16-11-01 20:26)
 * Aggregator System
   ☐ * Feeds are updated using command line `php artisan feed:update`
   ☐ * When page is loaded latest feeds are shown from all feed providers
@@ -34,7 +36,7 @@ Create a small web application that must implement:
 
  ✔ * Use css framework ([bootstrap](http://getbootstrap.com/), [foundation](http://foundation.zurb.com/)) or the one you are used to. @done (16-11-01 08:47)
  ☐ * Use js framework ([jQuery](https://jquery.com/), [vue.js](https://vuejs.org/)) or libs that only needs to accomplish the assignment.
- ☐ * Use php framework ([laravel](https://laravel.com/))
+ ✔ * Use php framework ([laravel](https://laravel.com/)) @done (16-11-01 16:29)
  ☐ * Use [Coding Standards](../../coding-standards/index.md)
  ☐ * **Don't use 3rd party libraries, use only vanilla code (only laravel framework).**
  ☐ * **Use service container for your service classes** 
