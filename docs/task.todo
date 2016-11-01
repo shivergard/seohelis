@@ -7,8 +7,8 @@ Create a small web application that must implement:
 * User System
     ✔ * Admin user is created from command line using `php artisan user:create` @done (16-10-30 20:19)
     ✔ -- Password reset from code [duplicated code :(] @done (16-11-01 05:31)
-    ☐ * Admin user can login
-    ☐ * Admin user can change password
+    ✔ * Admin user can login @done (16-11-01 06:05)
+    ✔ * Admin user can change password @done (16-11-01 08:47)
     ☐ * Admin user can add, edit, delete feed urls (CRUD)
     ☐ * Admin can create categories in which feed urls are grouped
 * Aggregator System
@@ -32,7 +32,7 @@ Create a small web application that must implement:
 
 ## Requirements
 
- ☐ * Use css framework ([bootstrap](http://getbootstrap.com/), [foundation](http://foundation.zurb.com/)) or the one you are used to.
+ ✔ * Use css framework ([bootstrap](http://getbootstrap.com/), [foundation](http://foundation.zurb.com/)) or the one you are used to. @done (16-11-01 08:47)
  ☐ * Use js framework ([jQuery](https://jquery.com/), [vue.js](https://vuejs.org/)) or libs that only needs to accomplish the assignment.
  ☐ * Use php framework ([laravel](https://laravel.com/))
  ☐ * Use [Coding Standards](../../coding-standards/index.md)
