@@ -38,6 +38,7 @@ Route::group(array('prefix' => "/sources"), function(){
     Route::get('/edit/{id}' , 'FeedSourcesController@edit');
     Route::get('/view/{id}' , 'FeedSourcesController@view');
     Route::post('/store' , 'FeedSourcesController@store');
+    Route::post('/delete' , 'FeedSourcesController@delete');
 });
 
 

@@ -11,7 +11,7 @@ Create User anna with password lVkHnxh0
     ✔ -- Password reset from code [duplicated code :(] @done (16-11-01 05:31)
     ✔ * Admin user can login @done (16-11-01 06:05)
     ✔ * Admin user can change password @done (16-11-01 08:47)
-    ☐ * Admin user can add, edit, delete feed urls (CRUD)
+    ✔ * Admin user can add, edit, delete feed urls (CRUD) @done (16-11-02 06:08)
     ✔ * Admin can create categories in which feed urls are grouped @done (16-11-01 20:26)
 * Aggregator System
   ☐ * Feeds are updated using command line `php artisan feed:update`

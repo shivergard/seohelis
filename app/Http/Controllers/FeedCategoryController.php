@@ -13,7 +13,7 @@ class FeedCategoryController extends Controller
 
     private $rules = array(
         'name' => 'required|max:50',
-        'description' => 'max:50',
+        'description' => 'max:250',
     );
 
     /**
