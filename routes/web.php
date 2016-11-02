@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PublicController@index');
+Route::post('/filter', 'PublicController@filter');
 
 Auth::routes();
 
