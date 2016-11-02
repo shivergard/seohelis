@@ -1,3 +1,18 @@
+#Feed Platform
+
+In Project directory run `composer install`  ([Composer](http://getcomposer.com))
+
+On finish add Database details in `.env` file add basic DB configurations (params with prefix DB_)
+
+Run command `php artisan migrate`
+
+Run command `php artisan serve` to launch server
+
+ToDo and basic requrements written in 'docs/task.todo'
+
+
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

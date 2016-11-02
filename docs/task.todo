@@ -49,8 +49,8 @@ Create User anna with password lVkHnxh0
 ## Additionally
 
  ☐ * Put all your code into a VCS - ([bitbucket](https://bitbucket.org/)) ## sorry - for test I use gitHub
- ☐ * Write a README.md on how to configure and run your application
- ☐ * Your application should work using PHP builtin server
+ ✔ * Write a README.md on how to configure and run your application @done (16-11-02 12:52)
+ ✔ * Your application should work using PHP builtin server @done (16-11-02 12:52)
 
 ## Most important things during the assesment
  ☐ * Have a great time
