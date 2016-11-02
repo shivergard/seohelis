@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\CreateUser::class,
-        Commands\ResetPassword::class
+        Commands\ResetPassword::class,
+        Commands\FeedUpdate::class
     ];
 
     /**
