@@ -20,12 +20,12 @@ Create User anna with password lVkHnxh0
   ✔ * User has posibility to filter feeds by category (choose one of the options) @done (16-11-02 11:33)
     ✔ * Filter using new request @done (16-11-02 11:33)
     ✔ * Filter using javascript  @done (16-11-02 11:33)
-  ☐ * When clicked on feed provider, the feed provider page is opened in new tab
-  ☐ * When clicked on feed title
-    ☐ * Modal window is shown with feed title and feed text
-    ☐ * There is two buttons:
-      ☐ * Go to feed page (opens in new tab)
-      ☐ * Close the modal
+  ✔ * When clicked on feed provider, the feed provider page is opened in new tab @done (16-11-02 12:22)
+  ✔ * When clicked on feed title @done (16-11-02 12:23)
+    ✔ * Modal window is shown with feed title and feed text @done (16-11-02 12:34)
+    ✔ * There is two buttons: @done (16-11-02 12:45)
+      ✔ * Go to feed page (opens in new tab) @done (16-11-02 12:45)
+      ✔ * Close the modal @done (16-11-02 12:36)
 
 ## Examples
 
@@ -36,10 +36,10 @@ Create User anna with password lVkHnxh0
 ## Requirements
 
  ✔ * Use css framework ([bootstrap](http://getbootstrap.com/), [foundation](http://foundation.zurb.com/)) or the one you are used to. @done (16-11-01 08:47)
- ☐ * Use js framework ([jQuery](https://jquery.com/), [vue.js](https://vuejs.org/)) or libs that only needs to accomplish the assignment.
+ ✔ * Use js framework ([jQuery](https://jquery.com/), [vue.js](https://vuejs.org/)) or libs that only needs to accomplish the assignment. @done (16-11-02 12:36)
  ✔ * Use php framework ([laravel](https://laravel.com/)) @done (16-11-01 16:29)
  ☐ * Use [Coding Standards](../../coding-standards/index.md)
- ☐ * **Don't use 3rd party libraries, use only vanilla code (only laravel framework).**
+ ✔ * **Don't use 3rd party libraries, use only vanilla code (only laravel framework).** @done (16-11-02 12:37)
       ==       ☐ ?? [vendor/laravel/framework/composer.json -- 102 guzzlehttp/guzzle is as `suggest`]    ==
       I would consider it as part of laravel framework because of this , but it is not loaded anywhere 
       == require "nesbot/carbon": "~1.20" -- vendor/laravel/framework/composer.json:27 . I consider Carbon is part of laravel framework
@@ -48,7 +48,7 @@ Create User anna with password lVkHnxh0
 
 ## Additionally
 
- ☐ * Put all your code into a VCS - ([bitbucket](https://bitbucket.org/)) 
+ ☐ * Put all your code into a VCS - ([bitbucket](https://bitbucket.org/)) ## sorry - for test I use gitHub
  ☐ * Write a README.md on how to configure and run your application
  ☐ * Your application should work using PHP builtin server
 

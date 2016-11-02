@@ -16,7 +16,8 @@ class FeedSourcesController extends Controller
         'title' => 'required|max:50',
         'description' => 'max:250',
         'url' => 'required|active_url',
-        'category_id' => 'required|integer'
+        'category_id' => 'required|integer',
+        'provider_url' => 'active_url'
     );
 
     /**
@@ -38,7 +39,7 @@ class FeedSourcesController extends Controller
 
         $list = FeedSources::paginate(10);
 
-        $fields = array('id' , 'title' , 'description' , 'url' , 'created_at');
+        $fields = array('id' , 'title' , 'description' , 'url' , 'provider_url' , 'created_at');
 
         return view('feed.list' , compact('list' , 'fields'));
     }
@@ -47,7 +48,7 @@ class FeedSourcesController extends Controller
 
         $controller = 'FeedSourcesController';
 
-        $fields = array('title' , 'description' , 'url');
+        $fields = array('title' , 'description' , 'url' , 'provider_url');
 
         //@todo @fix - this just isn't right :(
         $categories = Categories::all();
@@ -65,7 +66,7 @@ class FeedSourcesController extends Controller
 
         $feedSource = $feedSourceSearch->first();
 
-        $fields = array('title' , 'description' , 'url');
+        $fields = array('title' , 'description' , 'url' , 'provider_url');
 
         //@todo @fix - this just isn't right :(
         $categories = Categories::all();
@@ -88,7 +89,7 @@ class FeedSourcesController extends Controller
 
         $controller = 'FeedSourcesController';
 
-        $fields = array('id' , 'name' , 'description' , 'url');
+        $fields = array('id' , 'name' , 'description' , 'url' , 'provider_url');
 
         return view('feed.show' , compact('feedSource' , 'controller' , 'fields'));
     }

@@ -55,25 +55,22 @@
                         @else
                             <li><a href="{{ action('FeedCategoryController@list') }}">Categories</a></li>
                             <li><a href="{{ action('FeedSourcesController@list') }}">Feed Sources</a></li>
+                            <li><a href="{{ action('ProfileController@index') }}">Profile</a></li>
+                            <li>
+                                <a href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ ucfirst(Auth::user()->username) }} <span class="caret"></span>
                                 </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ action('ProfileController@index') }}">Profile</a></li>
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
                             </li>
                         @endif
                     </ul>

@@ -82,4 +82,23 @@ class PublicController extends Controller
 
         return response()->json($return);
     }
+
+    public function feedData(Request $request , $id){
+
+        if(!$request->ajax()){
+            return redirect()->back();
+        }
+
+        $feedItems = FeedsItems::where('id' , $id);  
+
+        $return = '';  
+
+        if ($feedItems->count() > 0){
+            $feedItem = $feedItems->first();
+
+            $return = view('parts.feed_modal' , compact('feedItem'));
+        } 
+
+        return $return;        
+    }
 }

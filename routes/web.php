@@ -13,6 +13,7 @@
 
 Route::get('/', 'PublicController@index');
 Route::post('/filter', 'PublicController@filter');
+Route::get('/feed/{id}', 'PublicController@feedData');
 
 Auth::routes();
 

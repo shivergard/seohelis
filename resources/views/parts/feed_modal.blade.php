@@ -1,0 +1,1 @@
+<div>{!!$feedItem->description!!}</div>

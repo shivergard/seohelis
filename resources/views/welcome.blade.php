@@ -34,6 +34,7 @@
                     @foreach($fields as $col)
                         <th>{{ trans('fields.'.$col) }}</th>
                     @endforeach
+                    <th>{{ trans('fields.provider') }}</th>
                     </thead>
                     <tbody id="item-list">
                          @include('parts.public_list_builder' , array('list' => $feedItems , 'fields' => $fields))          
@@ -49,6 +50,26 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="feedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body" id="modal_data">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="href_button" href="" onclick="window.open($(this).attr('href'),'_blank');" class="btn btn-primary">Open Feed Page</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
 
 
@@ -59,6 +80,13 @@
         function(){
             $.ajaxSetup({
                headers: { 'X-CSRF-Token' :  window.Laravel.csrfToken }
+            });
+
+            $("#feedModal").on("show.bs.modal", function(e) {
+                var itemLink = $(e.relatedTarget);
+                $(this).find("#myModalLabel").html(itemLink.attr("title"));
+                $(this).find(".modal-body").load(itemLink.attr("source"));
+                $(this).find("#href_button").attr("href" , itemLink.attr("link")); 
             });
         }
     );
