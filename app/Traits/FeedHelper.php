@@ -4,13 +4,23 @@ namespace App\Traits;
 
 trait FeedHelper {
 
+    private function get_http_response_code($url) {
+        $headers = get_headers($url);
+        return substr($headers[0], 9, 3);
+    }
+
     public function readFeed($url) {
 
         $return = array();
 
-        $contents = file_get_contents($url);
+        if (strpos($url , 'http') === 0 && $this->get_http_response_code($url) == 200){
+            $contents = file_get_contents($url);   
+        }else{
+            $contents = ""; 
+        }
 
         try {
+
             libxml_use_internal_errors(true);
             $xml=simplexml_load_string($contents);
             $errors = libxml_get_errors();

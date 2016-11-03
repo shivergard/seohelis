@@ -11,6 +11,8 @@ Run command `php artisan serve` to launch server
 ToDo and basic requrements written in 'docs/task.todo'
 
 
+#DEV NOTES
+app/Traits/FeedHelper.php:readFeed will not throw any error about invalid urls , so one user added invalid url would not stop whole background process of feed gathering
 
 
 # Laravel PHP Framework
