@@ -4,7 +4,8 @@ namespace App\Traits;
 
 trait UserHelper {
 
-    public function generatePassword($length = 8) {
+    public function generatePassword(int $length = 8) {
+
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $count = mb_strlen($chars);
 
