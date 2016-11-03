@@ -44,7 +44,7 @@ Create User anna with password lVkHnxh0
       I would consider it as part of laravel framework because of this , but it is not loaded anywhere 
       == require "nesbot/carbon": "~1.20" -- vendor/laravel/framework/composer.json:27 . I consider Carbon is part of laravel framework
  ☐ * **Use service container for your service classes** 
- ☐ * Write some tests for your classes
+ ✔ * Write some tests for your classes ### Really added only some tests not all critically needed tests :/ @done (16-11-03 20:54)
 
 ## Additionally
 
@@ -53,5 +53,5 @@ Create User anna with password lVkHnxh0
  ✔ * Your application should work using PHP builtin server @done (16-11-02 12:52)
 
 ## Most important things during the assesment
- ☐ * Have a great time
- ☐ * If you don't know or don't understand something - **ASK**! We will do our best to help you in solving your problem.
+ ✔ * Have a great time \\ great is not the work , was interesting at least :P @done (16-11-03 20:55)
+ ✔ * If you don't know or don't understand something - **ASK**! We will do our best to help you in solving your problem. @done (16-11-03 20:55)
