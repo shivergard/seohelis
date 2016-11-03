@@ -29,3 +29,11 @@
 
 @endsection
 
+
+@section('script')
+<script type="text/javascript">
+    function dropNode(data){
+        $('#drop_'+ data).submit();
+    }
+</script>
+@endsection
