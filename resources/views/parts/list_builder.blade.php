@@ -1,4 +1,12 @@
 @foreach ($list as $item)
+
+<tr>
+@if ($errors->has('delete'))
+    <span class="help-block">
+        <strong>{{ $errors->first('category_id') }}</strong>
+    </span>
+@endif
+</tr>
 <tr>
     @foreach($fields as $col)
         <td>{{ $item->$col }}</td>

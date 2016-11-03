@@ -135,7 +135,7 @@ class FeedSourcesController extends Controller
 
         $return = Redirect::to(action("FeedSourcesController@list"));
         
-        $items = Categories::where('id' , intval($id))->count();
+        $items = FeedSources::where('id' , intval(Input::get('id')));
 
         if (!($items->count() == 1 && $items->delete())){
             $return->withErrors(array('delete' => 'Missing ID'));  

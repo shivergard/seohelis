@@ -10,6 +10,7 @@
     <!-- if there are creation errors, they will show here -->
     <form method="POST" class="form-horizontal" action="{{ action($controller."@store") }}">
         {{ csrf_field() }}
+        
         @foreach($fields as $col)
             <div class="form-group">
 

@@ -125,10 +125,10 @@ class FeedCategoryController extends Controller
 
         $return = Redirect::to(action("FeedCategoryController@list"));
         
-        $items = Categories::where('id' , intval($id))->count();
+        $items = Categories::where('id' , intval(Input::get('id')));
 
         if (!($items->count() == 1 && $items->delete())){
-            $return->withErrors(array('delete' => 'Missing ID'));  
+            $return->withErrors(array('delete' => 'Missing ID '.intval(Input::get('id')));  
         }
 
         return $return;

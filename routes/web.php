@@ -28,7 +28,7 @@ Route::group(array('prefix' => "/category"), function(){
     Route::get('/edit/{id}' , 'FeedCategoryController@edit');
     Route::get('/view/{id}' , 'FeedCategoryController@view');
     Route::post('/store' , 'FeedCategoryController@store');
-    Route::post('/delete' , 'FeedCategoryController@delete');
+    Route::any('/delete' , 'FeedCategoryController@delete');
 });
 
 //feed source routes
@@ -38,7 +38,7 @@ Route::group(array('prefix' => "/sources"), function(){
     Route::get('/edit/{id}' , 'FeedSourcesController@edit');
     Route::get('/view/{id}' , 'FeedSourcesController@view');
     Route::post('/store' , 'FeedSourcesController@store');
-    Route::post('/delete' , 'FeedSourcesController@delete');
+    Route::any('/delete' , 'FeedSourcesController@delete');
 });
 
 
