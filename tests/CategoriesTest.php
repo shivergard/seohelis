@@ -1,6 +1,6 @@
 <?php
 
-usee App\Categories;
+use App\Categories;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -9,12 +9,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class CategoriesTest extends TestCase
 {
 
-}
-
-
-class freeRecruiterConsoleTest extends TestCase{
-
-    private $console = false;
+    private $categories = false;
 
     function __construct() {
         $this->startTestSuite();
@@ -25,13 +20,22 @@ class freeRecruiterConsoleTest extends TestCase{
         $this->categories = new Categories();  
     }
 
-    /**
-     * [testInstance description]
-     * @return [type] [description]
-     */
     public function testInstance()
     {
         $this->assertTrue($this->categories instanceof Categories);
     }
 
+    public function testBasicTable(){
+        $this->assertTrue($this->categories->getTable() == 'categories');   
+    }
+
+
+    public function testFillableValues(){
+
+        $actual = $this->categories->getFillable();
+
+        $expected = ['name', 'description'];
+
+        $this->assertEmpty(array_merge(array_diff($expected, $actual), array_diff($actual, $expected))); 
+    }
 }
